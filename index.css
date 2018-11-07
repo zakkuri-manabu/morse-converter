@@ -1,0 +1,36 @@
+header {
+  background-color: #fafafa;
+  font-family: "Rounded Mplus 1c";
+  margin: 0;
+  text-align: center; }
+  header a {
+    color: #EE5B5B;
+    display: inline-block;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 30px; }
+  header a:hover {
+    color: #EE5B5B; }
+
+#main {
+  font-family: "Rounded Mplus 1c";
+  background-color: #57C4B9;
+  background-size: cover;
+  min-height: 1000px; }
+  #main textarea {
+    width: 500px; }
+
+footer {
+  display: block;
+  background-color: #fafafa;
+  text-align: center; }
+  footer .fa-twitter {
+    font-size: 40px;
+    padding: 10px;
+    color: #EE5B5B; }
+  footer .fa-github {
+    font-size: 40px;
+    padding: 10px;
+    color: #EE5B5B; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utg-8">
+        <title>How to jekyll & GitHubPages</title>
+        <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="index-responsive.css">
+        <script src="index.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="{{ site.url }}">モールス変換器</a>
+        </header>
+
+        <div id="main">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <p>入力</p>
+                        <textarea id="inputBox" onChange=inputConverter()></textarea>
+                        
+                        <br>
+                        <select id="languageSelecter" onChange=variableConverter() onClick=inputConverter()>
+                          <option value="Japanese">和文符号</option>
+                          <option value="Western">欧文符号</option>
+                        </select>
+
+                        <select id="translateSelecter" onChange=variableConverter() onClick=inputConverter()>
+                          <option value="ToMorse">モールス変換</option>
+                          <option value="MorseTo">平文変換</option>
+                        </select>
+
+                        <select id="jWordLetterSelecter" onChange=variableConverter() onClick=inputConverter()>
+                          <option value="ZenKata">全角カタ</option>
+                          <option value="HanKata">半角カタ</option>
+                          <option value="Hira">ひらがな</option>
+                        </select>
+
+                        <select id="jNumLetterSelecter" onChange=variableConverter() onClick=inputConverter()>
+                          <option value="ZenSu">全角数字</option>
+                          <option value="HanSu">半角数字</option>
+                        </select>
+
+                        <select id="wLetterSelecter" onChange=variableConverter() onClick=inputConverter()>
+                          <option value="Upper">大文字</option>
+                          <option value="Downer">小文字</option>
+                        </select>
+                        
+                        <p>出力</p>
+                        <textarea id="outputBox"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <a class="twitter" href="https://twitter.com/zakkuri_manabu"><i class="fab fa-twitter"></i></a>
+            <a class="github" href="https://github.com/zakkuri-manabu"><i class="fab fa-github"></i></a>
+        </footer>
+    </body>
+</html>
