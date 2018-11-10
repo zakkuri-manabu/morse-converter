@@ -23,41 +23,51 @@
                 <div class="row">
                     <div>
                         <p>入力</p>
-                        <textarea id="inputBox" onChange=inputConverter()></textarea>
+                        <textarea id="inputBox" onInput=inputConverter()></textarea>
                         
                         <br>
-                        <select id="languageSelecter" onChange=variableConverter() onClick=inputConverter()>
+                        <select id="languageSelecter" onChange=variableConverter()>
                           <option value="Japanese">和文符号</option>
                           <option value="Western">欧文符号</option>
                         </select>
 
-                        <select id="translateSelecter" onChange=variableConverter() onClick=inputConverter()>
+                        <select id="translateSelecter" onChange=variableConverter()>
                           <option value="ToMorse">モールス変換</option>
                           <option value="MorseTo">平文変換</option>
                         </select>
 
-                        <select id="jWordLetterSelecter" onChange=variableConverter() onClick=inputConverter()>
+                        <select id="jWordLetterSelecter" onChange=variableConverter()>
                           <option value="ZenKata">全角カタ</option>
                           <option value="HanKata">半角カタ</option>
                           <option value="Hira">ひらがな</option>
                         </select>
 
-                        <select id="jNumLetterSelecter" onChange=variableConverter() onClick=inputConverter()>
+                        <select id="jNumLetterSelecter" onChange=variableConverter()>
                           <option value="ZenSu">全角数字</option>
                           <option value="HanSu">半角数字</option>
                         </select>
 
-                        <select id="wLetterSelecter" onChange=variableConverter() onClick=inputConverter()>
+                        <select id="wLetterSelecter" onChange=variableConverter()>
                           <option value="Upper">大文字</option>
                           <option value="Downer">小文字</option>
                         </select>
-                        
+
                         <p>出力</p>
-                        <textarea id="outputBox"></textarea>
+                        <textarea id="outputBox" readonly onclick=this.select()></textarea>
+
+                        <p><strong>使用できる文字</strong></p>
+                        <p>和文符号：全角ひらがな[あ-ん]、全角カタカナ[ア-ン]、半角カタカナ[ｱ-ﾝ]、全角数字[０-９]、半角数字[0-9]、一部全角記号、一部半角記号</p>
+                        <p>欧文符号：半角英数[A-Z][a-z][0-9]、一部半角記号</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            document.getElementById("jWordLetterSelecter").style.display ="none";
+            document.getElementById("jNumLetterSelecter").style.display ="none";
+            document.getElementById("wLetterSelecter").style.display ="none";
+        </script>
 
         <footer>
             <a class="twitter" href="https://twitter.com/zakkuri_manabu"><i class="fab fa-twitter"></i></a>

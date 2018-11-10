@@ -709,6 +709,23 @@ function variableConverter() {
   jWordLetter = document.getElementById("jWordLetterSelecter").value;
   jNumLetter = document.getElementById("jNumLetterSelecter").value;
   wLetter = document.getElementById("wLetterSelecter").value;
+
+  if(translate == "MorseTo"){
+    if(language == "Japanese"){
+      jWordLetterSelecter.style.display = "inline";
+      jNumLetterSelecter.style.display = "inline";
+      wLetterSelecter.style.display = "none";
+    }else if(language == "Western"){
+      jWordLetterSelecter.style.display = "none";
+      jNumLetterSelecter.style.display = "none";
+      wLetterSelecter.style.display = "inline";
+    }
+  }else if(translate == "ToMorse"){
+    jWordLetterSelecter.style.display = "none";
+    jNumLetterSelecter.style.display = "none";
+    wLetterSelecter.style.display = "none";
+  }
+  inputConverter();
 }
 
 function inputConverter() {
