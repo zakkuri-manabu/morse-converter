@@ -1,7 +1,11 @@
+html, body {
+  font-family: "Rounded Mplus 1c";
+  background-color: #57C4B9;
+  color: #EE5B5B;
+  height: 100%; }
+
 header {
   background-color: #fafafa;
-  font-family: "Rounded Mplus 1c";
-  margin: 0;
   text-align: center; }
   header a {
     color: #EE5B5B;
@@ -10,35 +14,51 @@ header {
     font-weight: bold;
     font-size: 30px; }
   header a:hover {
-    color: #EE5B5B; }
+    color: #EE5B5B;
+    text-decoration: none; }
 
 #main {
-  font-family: "Rounded Mplus 1c";
-  padding-top: 20px;
-  color: #EE5B5B;
-  background-color: #57C4B9;
-  background-size: cover;
-  min-height: 1000px;
+  min-height: 100%;
   font-size: 17px;
   text-align: center; }
+  #main .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #fafafa; }
   #main p {
     font-size: 20px;
     text-align: left; }
+  #main #selecters {
+    text-align: left;
+    padding: 30px 15px; }
   #main select {
-    margin: 20px 0 30px 0;
-    color: #EE5B5B; }
+    color: #EE5B5B;
+    border: 1px solid #57C4B9; }
+  #main p.strong {
+    text-align: center;
+    margin-bottom: 0; }
   #main textarea {
-    display: block;
+    width: 90%;
+    height: 500px;
+    resize: none;
     background-color: #fafafa;
     color: #1e1e1e;
-    margin: 0 auto;
-    width: 80%;
-    height: 50%; }
+    border: 3px solid #57C4B9; }
+  #main #input #output {
+    padding: 30px 0; }
+  #main #attentionMessages {
+    display: block;
+    margin: 30px; }
+    #main #attentionMessages p {
+      font-size: 17px;
+      line-height: 17px; }
 
 footer {
   display: block;
   background-color: #fafafa;
   text-align: center; }
+  footer .push {
+    height: 60px; }
   footer .fa-twitter {
     font-size: 40px;
     padding: 10px;

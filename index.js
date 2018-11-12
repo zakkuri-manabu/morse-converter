@@ -1,4 +1,4 @@
-const MorseToWTable = {
+const MorseToWTable = { //This table use convert morse to alphabet.
   Upper:{
     '.-':'A',
     '-...':'B',
@@ -74,6 +74,7 @@ const MorseToWTable = {
     '.-.-.-':'.',
     '--..--':',',
     '---...':':',
+    '-.-.--':'!',
     '..--..':'?',
     '.----.':'\'',
     '-....-':'-',
@@ -88,7 +89,7 @@ const MorseToWTable = {
   }
 }
 
-const MorseToJTable = {
+const MorseToJTable = { //This table use convert motse to japanes.
   Hira:{
   '－－・－－':'あ',
   '・－':'い',
@@ -337,6 +338,7 @@ const MorseToJTable = {
   },
 
   Common:{
+    '・－・・－':'ヰ',
     '\t':' ',
     '・・':'゛',
     '・・－－・':'゜',
@@ -345,7 +347,7 @@ const MorseToJTable = {
   }
 }
 
-const WToMorseTable = {
+const WToMorseTable = { //This table use convert alphabet to morse.
   A:'.-', 
   B:'-...',
   C:'-.-.',
@@ -408,12 +410,14 @@ const WToMorseTable = {
   7:'--...',
   8:'---..',
   9:'----.',
+  '\s':' ',
   '.':'.-.-.-',
-  ',':'--..--',
-  ':':'---...',
-  '?':'..--..',
-  '\'':'.----.',
-  '-':'-....-',
+  ',':'--..--',//－－・・－－
+  ':':'---...',//－－－・・・
+  '!':'-.-.--',//－・－・－－
+  '?':'..--..',//・・－－・・
+  '\'':'.----.',//・－－－－
+  '-':'-....-',//－・・・・－
   '(':'-.--.',
   ')':'-.--.-',
   '/':'-..-.',
@@ -421,10 +425,10 @@ const WToMorseTable = {
   '+':'.-.-.',
   '"':'.-..-.',
   '*':'-..-',
-  '@':'.--.-.',
+  '@':'.--.-.',//・－－・－・
 }
 
-const JToMorseTable = {
+const JToMorseTable = { //This table use convert japanes to morse.
   あ:'－－・－－',
   い:'・－',
   う:'・・－',
@@ -690,11 +694,13 @@ const JToMorseTable = {
   '(':'－・－－・－',
   ')':'・－・・－・',
   ',':'・－・－・－',
-  ' ':' ',
+  '\s':' ',
   '゛':'・・','˝':'・・','〝':'・・','〟':'・・',
   '゜':'・・－－・',
-  '|':'・－－・－','ー':'・－－・－',
+  '|':'・－－・－',
+  'ー':'・－－・－',
   '\n':'・－・－・・',
+  'ヰ':'・－・・－',
 }
 
 var language = "Japanese";
