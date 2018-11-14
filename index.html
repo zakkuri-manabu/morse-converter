@@ -10,6 +10,8 @@
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" type="text/css" href="index-responsive.css">
+        <script src="jquery.min.js" type="text/javascript"></script>
+        <script src="jquery.autosize.js" type="text/javascript"></script>
         <script src="index.js"></script>
     </head>
 
@@ -21,7 +23,7 @@
         <div id="main">
             <div class="container">
                 <div class="row">
-                    <div id="selecters" class="col-12 col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                    <div id="configuration" class="col-12 col-lg-12  col-md-12 col-sm-12 col-xs-12">
                         <p><strong>設定</strong></p>
                         <select id="languageSelecter" onChange=variableConverter()>
                             <option value="Japanese">和文符号</option>
@@ -50,17 +52,25 @@
                         </select>
                     </div>
 
-                    <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12" id="input">
+                    <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12 box" id="input">
                         <p><strong>入力</strong></p>
-                        <textarea id="inputBox" onInput=inputConverter() onclick=this.select() placeholder="こんにちは、モールス"></textarea>
-                    </div>
-                    
-                    <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12" id="output">
-                        <p><strong>出力</strong></p>
-                        <textarea id="outputBox" readonly onclick=this.select() placeholder="－－－－ ・－・－・ －・－・ ・・－・ －・・・ ・－・－・－ －・・－・ ・－－・－ －・－－・ －－－・－"></textarea>
+                        <textarea id="inputBox" rows="5" onInput=inputConverter() onclick=this.select() placeholder="こんにちは、モールス"></textarea>
                     </div>
 
-                    <div id="attentionMessages">
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('inputBox').autosize({
+                        //      append: "\n"  // 内部に自動的に付与する
+                            });  
+                        });
+                    </script>
+                    
+                    <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12 box" id="output">
+                        <p><strong>出力</strong></p>
+                        <textarea id="outputBox" rows="5" readonly onclick=this.select() placeholder="－－－－ ・－・－・ －・－・ ・・－・ －・・・ ・－・－・－ －・・－・ ・－－・－ －・－－・ －－－・－"></textarea>
+                    </div>
+
+                    <div id="attentionMessages" class="col-12 col-lg-12  col-md-12 col-sm-12 col-xs-12">
                         <p><strong>対応文字</strong></p>
                         <p>和文符号：全角ひらがな、全角カタカナ、半角カタカナ、全角数字、半角数字、一部全角記号、一部半角記号、一部特殊ひらがな、一部特殊カタカナ、その他</p>
                         <p>欧文符号：半角英数字、一部半角記号</p>
@@ -80,9 +90,9 @@
             document.getElementById("wLetterSelecter").style.display ="none";
         </script>
 
-        <footer>
+        <div id="footer">
             <a class="twitter" href="https://twitter.com/zakkuri_manabu"><i class="fab fa-twitter"></i></a>
             <a class="github" href="https://github.com/zakkuri-manabu"><i class="fab fa-github"></i></a>
-        </footer>
+        </div>
     </body>
 </html>
