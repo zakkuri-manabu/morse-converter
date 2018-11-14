@@ -722,6 +722,7 @@ var space = '　';
 
 
 function variableConverter() {
+  
   language = document.getElementById("languageSelecter").value;
   translate = document.getElementById("translateSelecter").value;
   jWordLetter = document.getElementById("jWordLetterSelecter").value;
@@ -755,7 +756,7 @@ function variableConverter() {
     }
   }
 
-  if(language == 'Japanes'){
+  if(language == 'Japanese'){
     referenceTabe = JTable;
     referenceToMorseTable = JToMorseTable;
     space = '　';
@@ -772,7 +773,7 @@ function variableConverter() {
 
 
 function JTableChanger() {
-  
+
   if(jWordLetter == "ZenKata"){
     referenceWordTable = JTable.ZenKata;
   }else if(jWordLetter == "HanKata"){
@@ -782,9 +783,9 @@ function JTableChanger() {
   }
 
   if(jNumLetter == "ZenSu"){
-    referenceWordTable = JTable.ZenSu;
+    referenceNumberTable = JTable.ZenSu;
   }else if(jNumLetter == "HanSu"){
-    referenceWordTable = JTable.HanSu;
+    referenceNumberTable = JTable.HanSu;
   }
 
   referenceCommonTable = JTable.Common;
@@ -837,6 +838,7 @@ function ToMorseConverter(inputLine) {
 
 
 function MorseToConverter(inputLine) {
+
   if(inputLine == undefined){
     return;
   }
