@@ -15,9 +15,6 @@ header {
     padding: 5px;
     font-weight: bold;
     font-size: 30px; }
-  header a:hover {
-    color: #EE5B5B;
-    text-decoration: none; }
 
 #main {
   text-align: center; }
