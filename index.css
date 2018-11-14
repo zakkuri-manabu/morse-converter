@@ -7,11 +7,11 @@ html, body {
 header {
   background-color: #fafafa;
   text-align: center;
-  margin: 20px 0;
-  border-bottom: 1px solid #57C4B9; }
-  header a {
+  margin: 20px 0; }
+  header p {
     color: #EE5B5B;
     display: inline-block;
+    margin: 0;
     padding: 5px;
     font-weight: bold;
     font-size: 30px; }
