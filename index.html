@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div id="configuration" class="col-12 col-lg-12  col-md-12 col-sm-12 col-xs-12">
-                        <p><strong>設定</strong></p>
+                        <h3><strong>設定</strong></h3>
                         <select id="languageSelecter" onChange=variableConverter()>
                             <option value="Japanese">和文符号</option>
                             <option value="Western">欧文符号</option>
@@ -51,24 +51,35 @@
                     </div>
 
                     <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12 box" id="input">
-                        <p><strong>入力</strong></p>
+                        <h3><strong>入力</strong></h3>
                         <textarea id="inputBox" rows="5" onInput=inputConverter() onclick=this.select() placeholder="こんにちは、モールス"></textarea>
                     </div>
                     
                     <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12 box" id="output">
-                        <p><strong>出力</strong></p>
+                        <h3><strong>出力</strong></h3>
                         <textarea id="outputBox" rows="5" readonly onclick=this.select() placeholder="－－－－ ・－・－・ －・－・ ・・－・ －・・・ ・－・－・－ －・・－・ ・－－・－ －・－－・ －－－・－"></textarea>
                     </div>
 
-                    <div id="attentionMessages" class="col-12 col-lg-12  col-md-12 col-sm-12 col-xs-12">
-                        <p><strong>対応文字</strong></p>
-                        <p>和文符号：全角ひらがな、全角カタカナ、半角カタカナ、全角数字、半角数字、一部全角記号、一部半角記号、一部特殊ひらがな、一部特殊カタカナ、その他</p>
-                        <p>欧文符号：半角英数字、一部半角記号</p>
-                        <p>一部全角記号：（）、－゛゜</p>
-                        <p>一部半角記号：(),:!?-/=+"*@</p>
-                        <p>一部特殊ひらがな：ゔか゚き゚く゚け゚こ゚</p>
-                        <p>一部特殊カタカナ：ヴカ゚キ゚ク゚ケ゚コ゚セ゚ツ゚ト゚</p>
-                        <p>その他：ヰﾞﾟ|</p>
+                    <div id="attentionMessageTitle" class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3><strong>対応文字</strong></h3>
+                    </div>
+                    <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-xs-12 attentionMessages">
+                        <p class="J-attentionTitle"><strong>和文符号：</strong></p>
+                        <p>　全角ひらがな[あ-ん]</p>
+                        <p>　全角カタカナ[ア-ン]</p>
+                        <p>　半角カタカナ[ｱ-ﾝ]</p>
+                        <p>　全角数字[０-９]</p>
+                        <p>　半角数字[0-9]</p>
+                        <p>　一部全角記号[（）、－゛゜]</p>
+                        <p>　一部半角記号[(),:-/=+"*@]</p>
+                        <p>　一部特殊ひらがな[ゔか゚き゚く゚け゚こ゚</p>
+                        <p>　一部特殊カタカナ[ヴ行／カ゚キ゚ク゚ケ゚コ゚セ゚ツ゚ト゚]</p>
+                        <p>　その他[ｳﾞ行／ヰﾞﾟ|]</p>
+                    </div>
+                    <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12 attentionMessages">
+                        <p class="W-attentionTitle"><strong>欧文符号：</strong></p>
+                        <p>　半角英数字[A-Z][a-z][0-9]</p>
+                        <p>　一部半角記号[(),:!?-/=+"*@]</p>
                     </div>
                 </div>
             </div>

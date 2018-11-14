@@ -829,6 +829,7 @@ function ToMorseConverter(inputLine) {
       continue;
     }
   }
+  
   document.getElementById('outputBox').innerHTML = answer.slice(0,-1);
   outputBoxRender()
 }
@@ -838,6 +839,7 @@ function MorseToConverter(inputLine) {
   if(inputLine == undefined){
     return;
   }
+
   let answer = '';
   let word = '';
   let spaceCounter = 0;
