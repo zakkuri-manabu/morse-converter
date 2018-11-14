@@ -23,7 +23,7 @@ header {
   #main .row {
     margin: 0 auto; }
   #main #configuration {
-    padding-top: 30px;
+    padding-top: 40px;
     text-align: left; }
   #main select {
     color: #EE5B5B;
@@ -31,7 +31,7 @@ header {
     border: 1px solid #57C4B9;
     outline: none; }
   #main .box {
-    padding-top: 30px; }
+    padding-top: 40px; }
   #main textarea {
     width: 100%;
     resize: none;
@@ -58,12 +58,12 @@ header {
   #main #attentionMessageTitle {
     text-align: left;
     display: block;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 10px; }
   #main .attentionMessages {
     display: inline;
     text-align: left;
-    padding: 0 0 30px 20px;
+    padding: 0 0 40px 20px;
     font-size: 15px;
     line-height: 10px; }
 
