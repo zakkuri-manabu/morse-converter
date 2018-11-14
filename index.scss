@@ -1,0 +1,141 @@
+$main-color: #57C4B9;
+$sub-color: rgb(250, 250, 250);
+$accent-color: #EE5B5B;
+$word-color: rgb(30, 30, 30);
+$placeholder-color: #aaaaaa;
+
+html , body {
+    font-family: "Rounded Mplus 1c";
+    background-color: $main-color;
+    color: $accent-color;
+    height: 100%;
+}
+
+
+header {
+    background-color: $sub-color;
+    text-align: center;
+    margin: 20px 0;
+    border-bottom: 1px solid $main-color;
+    
+    a {
+        color: $accent-color;
+        display: inline-block;
+        padding: 5px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    a:hover {
+        color: $accent-color;
+        text-decoration: none;
+    }
+}
+
+
+#main {
+    text-align: center;
+
+    .container {
+        background-color: $sub-color;
+    }
+
+    .row {
+        margin: 0 auto;
+    }
+
+    #configuration {
+        padding-top: 30px;
+        text-align: left;
+    }
+
+    select {
+        color: $accent-color;
+        height: 35px;
+        border: 1px solid $main-color;
+        outline: none;
+    }
+
+    .box {
+        padding-top: 30px;
+    }
+
+    textarea {
+        width: 100%;
+        resize: none;
+        background-color: $sub-color;
+        color: $word-color;
+        border: 3px solid $main-color;
+        outline: none;
+    }
+
+    ::-webkit-input-placeholder {
+        color: $placeholder-color;
+    }
+
+    :-moz-placeholder {
+        color: $placeholder-color;
+    }
+
+    ::-moz-placeholder {
+        color: $placeholder-color;
+    }
+    
+    :-ms-input-placeholder {
+        color: $placeholder-color;
+    }
+    
+    #input {
+        text-align: left;
+        
+        p{
+            margin-bottom: 15px;
+        }
+    }
+
+    #output {
+        text-align: left;
+        
+        p{
+            margin-bottom: 15px;
+        }
+    }
+
+    #attentionMessageTitle {
+        text-align: left;
+        display: block;
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
+    .attentionMessages {
+        display: inline;
+        text-align: left;
+        padding: 0 0 30px 20px;
+        font-size: 15px;
+        line-height: 10px;
+    }
+}
+
+#footer {
+    border-top: 1px solid $main-color;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    margin: 20px 0;
+    background-color: $sub-color;
+    text-align: center;
+
+    .fa-twitter{
+        font-size: 40px;
+        padding: 5px;
+        color: $accent-color;
+    }
+    
+    .fa-github {
+        font-size: 40px;
+        padding: 5px;
+        color: $accent-color;
+    }
+}
