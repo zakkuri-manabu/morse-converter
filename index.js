@@ -318,7 +318,6 @@ const JTable = { //This table use convert motse to japanes.
     '－・－－・－':'（',
     '・－・・－・':'）',
     '・－・－・－':'、',
-    '　':'　',
   },
   
   HanSu:{
@@ -335,7 +334,6 @@ const JTable = { //This table use convert motse to japanes.
     '－・－－・－':'(',
     '・－・・－・':')',
     '・－・－・－':',',
-    ' ':' ',
   },
 
   Common:{
@@ -684,7 +682,6 @@ const JToMorseTable = { //This table use convert japanes to morse.
   '（':'－・－－・－',
   '）':'・－・・－・',
   '、':'・－・－・－',
-  '　':'　',
   0:'－－－－－',
   1:'・－－－－',
   2:'・・－－－',
@@ -698,7 +695,7 @@ const JToMorseTable = { //This table use convert japanes to morse.
   '(':'－・－－・－',
   ')':'・－・・－・',
   ',':'・－・－・－',
-  '\s':' ',
+  '\s':'　',
   '゛':'・・','˝':'・・','〝':'・・','〟':'・・',
   '゜':'・・－－・',
   '|':'・－－・－',
