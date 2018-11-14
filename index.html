@@ -10,8 +10,6 @@
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" type="text/css" href="index-responsive.css">
-        <script src="jquery.min.js" type="text/javascript"></script>
-        <script src="jquery.autosize.js" type="text/javascript"></script>
         <script src="index.js"></script>
     </head>
 
@@ -56,14 +54,6 @@
                         <p><strong>入力</strong></p>
                         <textarea id="inputBox" rows="5" onInput=inputConverter() onclick=this.select() placeholder="こんにちは、モールス"></textarea>
                     </div>
-
-                    <script type="text/javascript">
-                        $(document).ready(function(){
-                            $('inputBox').autosize({
-                        //      append: "\n"  // 内部に自動的に付与する
-                            });  
-                        });
-                    </script>
                     
                     <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12 box" id="output">
                         <p><strong>出力</strong></p>

@@ -812,7 +812,7 @@ function inputConverter() {
   }else if(translate == 'ToMorse'){
     ToMorseConverter(inputLine);
   }
-  //inputBoxRender()
+  inputBoxRender()
 }
 
 
@@ -830,7 +830,7 @@ function ToMorseConverter(inputLine) {
     }
   }
   document.getElementById('outputBox').innerHTML = answer.slice(0,-1);
-  //outputBoxRender()
+  outputBoxRender()
 }
 
 
@@ -871,7 +871,7 @@ function MorseToConverter(inputLine) {
   }
 
   document.getElementById('outputBox').innerHTML = answer;
-  //outputBoxRender()
+  outputBoxRender()
 }
 
 
