@@ -428,6 +428,7 @@ const WToMorseTable = { //This table use convert alphabet to morse.
   '"':'.-..-.',
   '*':'-..-',
   '@':'.--.-.',//・－－・－・
+  '\n':'\n',
 }
 
 
