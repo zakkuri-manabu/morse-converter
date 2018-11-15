@@ -8,9 +8,13 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" type="text/css" href="index-responsive.css">
         <script src="index.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="autosize.js"></script>
+                       
     </head>
 
     <body>
@@ -50,15 +54,21 @@
                         </select>
                     </div>
 
-                    <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12 box" id="input">
+                    <div class="col-12 col-lg-6  col-md-12 col-sm-12 col-xs-12 box" id="input">
                         <h3><strong>入力</strong></h3>
-                        <textarea id="inputBox" rows="5" onInput=inputConverter() onclick=this.select() placeholder="こんにちは、モールス"></textarea>
+                        <textarea id="inputBox" rows="8" onInput=inputConverter() onclick=this.select() placeholder="こんにちは、モールス"></textarea>
                     </div>
                     
-                    <div class="col-12 col-lg-6  col-md-6 col-sm-12 col-xs-12 box" id="output">
+                    <div class="col-12 col-lg-6  col-md-12 col-sm-12 col-xs-12 box" id="output">
                         <h3><strong>出力</strong></h3>
-                        <textarea id="outputBox" rows="5" readonly onclick=this.select() placeholder="－－－－ ・－・－・ －・－・ ・・－・ －・・・ ・－・－・－ －・・－・ ・－－・－ －・－－・ －－－・－"></textarea>
+                        <textarea id="outputBox" rows="8" readonly onclick=this.select() placeholder="－－－－ ・－・－・ －・－・ ・・－・ －・・・ ・－・－・－ －・・－・ ・－－・－ －・－－・ －－－・－"></textarea>
                     </div>
+
+                    <script>
+                        $(function(){
+                            autosize($('#inputBox'));
+                        });
+                    </script> 
 
                     <div id="attentionMessageTitle" class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <h3><strong>対応文字</strong></h3>
@@ -71,7 +81,7 @@
                         <p>　全角数字[０-９]</p>
                         <p>　半角数字[0-9]</p>
                         <p>　一部全角記号[（）、－゛゜]</p>
-                        <p>　一部半角記号[(),ﾟﾞ]</p>
+                        <p>　一部半角記号[(),ﾞﾟ]</p>
                         <p>　一部特殊ひらがな[か゚き゚く゚け゚こ゚]</p>
                         <p>　一部特殊カタカナ[カ゚キ゚ク゚ケ゚コ゚セ゚ツ゚ト゚]</p>
                         <p>　その他[ヰﾞﾟ|]</p>
